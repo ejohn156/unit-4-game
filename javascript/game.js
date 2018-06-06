@@ -109,7 +109,7 @@ $(document).ready(function () {
             $("#desiredscore").text(desiredScore)
             $("#currentscore").text(currentScore)
             $("#wins").text(wins)
-            $("#losses").text(currentScore)
+            $("#losses").text(losses)
         }
         else if (currentScore > desiredScore) {
             
@@ -120,7 +120,7 @@ $(document).ready(function () {
             $("#desiredscore").text(desiredScore)
             $("#currentscore").text(currentScore)
             $("#wins").text(wins)
-            $("#losses").text(currentScore)
+            $("#losses").text(losses)
         }
     });
 
