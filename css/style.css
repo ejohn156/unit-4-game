@@ -1,7 +1,24 @@
-.crystal-image {
-    width: 50px;
-    height: 50px;
-  }
-  body{
-      background-color: lightblue;
-  }
+h1
+{
+    color: darkblue
+}
+.header
+{
+    text-align: center;
+}
+img
+{
+    height: 10em;
+    width: 22%;
+    margin: 1% 1% 1% 1%
+}
+.scoreboard
+{
+    text-align: center;
+    margin-top: 5%;
+}
+.images
+{
+   float: right;
+    margin-top: 10%;
+}

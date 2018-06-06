@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>simple crystal game</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crystla game</title>
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-</head>
-
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="javascript/game.js"></script>
+  </head>
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h1>Number to Guess:
-          <span id="number-to-guess"></span>
-        </h1>
+    <div class="row header">
+      
+      <div class="col-md-12">
+        <h1>Welcome to the crystal game!!!</h1>
       </div>
-      <div class="col-md-8">
-        <div id="crystals">
+    
+      </div>
+      <div class="scoreboard">
+      <div class="row"> 
+        <div class="col-md-6">
+          <h3>Desired Score: <span id="desiredscore"></span></h3>
+          <h3>Current Score: <span id="currentscore"></span></h3>
+        </div>
+        <div class="col-md-6">
+            <h3>Wins: <span id="wins"></span></h3>
+            <h3>Losses: <span id="losses"></span></h3>
         </div>
       </div>
     </div>
-    </script>
-  </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="images">
+          <img id="img1" src="images/crystalimg1.jpg">
+          <img id="img2" src="images/crystalimg2.jpg">
+          <img id="img3" src="images/crystalimg3.jpg">
+          <img id="img4" src="images/crystalimg4.jpg">
+        </div>
+      </div>
+    </div>
+  
 </body>
-
 </html>
