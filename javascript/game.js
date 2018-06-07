@@ -1,14 +1,17 @@
 $(document).ready(function () {
+   // initialize all needed variables
     var desiredScore;
     var crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
     var currentScore = 0;
     var wins = 0;
     var losses = 0;
     desiredScore = Math.floor(Math.random() * 101) + 19
+    //fill start information onto html page
     $("#desiredscore").text(desiredScore)
     $("#currentscore").text(currentScore)
     $("#wins").text(wins)
     $("#losses").text(currentScore)
+    //created necessary functions
     function newRound(){
         desiredScore = Math.floor(Math.random() * 101) + 19
             crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
@@ -41,6 +44,7 @@ $(document).ready(function () {
             newRound()
         }
     }
+    //create events allowing user to interact with the game
     $("#img1").on("click", function () {
         play($("#img1").attr("id"))  
     });
