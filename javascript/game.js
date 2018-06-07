@@ -9,123 +9,49 @@ $(document).ready(function () {
     $("#currentscore").text(currentScore)
     $("#wins").text(wins)
     $("#losses").text(currentScore)
-
-
-    $("#img1").on("click", function () {
+    function newRound(){
+        desiredScore = Math.floor(Math.random() * 101) + 19
+            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
+            currentScore = 0;           
+            $("#desiredscore").text(desiredScore)
+            $("#currentscore").text(currentScore)
+            $("#wins").text(wins)
+            $("#losses").text(losses)
+    }
+    function play(x){   
+        if (x == "img1")
         currentScore += crystalPoints[0]
+        
+        else if (x == "img2")
+        currentScore += crystalPoints[1]
+        
+        else if (x == "img3")
+        currentScore += crystalPoints[2]
+        
+        else if (x == "img4")
+        currentScore += crystalPoints[3]
+        
         $("#currentscore").text(currentScore)
-
         if (currentScore == desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
             wins++
-           
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-
+            newRound()
         }
-        else if (currentScore > desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
+        else if (currentScore > desiredScore) {           
             losses++
-            
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-
+            newRound()
         }
+    }
+    $("#img1").on("click", function () {
+        play($("#img1").attr("id"))  
     });
     $("#img2").on("click", function () {
-        currentScore += crystalPoints[1]
-        $("#currentscore").text(currentScore)
-
-        if (currentScore == desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
-            wins++
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-        }
-        else if (currentScore > desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
-            losses++
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-        }
+        play($("#img2").attr("id"))  
     });
     $("#img3").on("click", function () {
-        currentScore += crystalPoints[2]
-        $("#currentscore").text(currentScore)
-
-        if (currentScore == desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
-            wins++
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-        }
-        else if (currentScore > desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
-            losses++
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-        }
+        play($("#img3").attr("id"))
     });
     $("#img4").on("click", function () {
-        currentScore += crystalPoints[3]
-        $("#currentscore").text(currentScore)
-
-        if (currentScore == desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
-            wins++
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-        }
-        else if (currentScore > desiredScore) {
-            
-            desiredScore = Math.floor(Math.random() * 101) + 19
-            crystalPoints = [Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 12) + 1]
-            currentScore = 0;
-            losses++
-            $("#desiredscore").text(desiredScore)
-            $("#currentscore").text(currentScore)
-            $("#wins").text(wins)
-            $("#losses").text(losses)
-        }
+        play($("#img4").attr("id"))   
     });
-
-
-
-
 });
 
